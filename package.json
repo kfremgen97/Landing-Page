@@ -1,0 +1,16 @@
+{
+  "name": "landingpage",
+  "version": "1.0.0",
+  "description": " multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
