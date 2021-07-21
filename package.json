@@ -2,7 +2,7 @@
   "name": "landingpage",
   "version": "1.0.0",
   "description": " multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

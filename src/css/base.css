@@ -1,0 +1,52 @@
+/***** Variables *****/
+
+:root{
+    /*primary colors*/
+    --primary-light: #6EE7B7;
+    --primary: #10B981;
+    --primary-dark: #047857;
+    --text-light: #eeeeee;
+    --text-dark: #111111;
+}
+
+/***** All Selector *****/
+
+*,
+*::before,
+*::after{
+    /*set the padding and margin to 0*/
+    padding: 0;
+    margin: 0;
+    /*set the box sizing to inherit*/
+    box-sizing: inherit;
+}
+
+/***** Root ******/
+
+html{
+    /*set the root font size to 10px*/
+    font-size: 62.5%;
+    /*set the box sizing to border-box to include the border and padding while sizing*/
+    box-sizing: border-box;
+}
+
+/***** Body *****/
+
+body{
+    /*set the font proeprties for the web page*/
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    line-height:1.6;
+    /*set the min height to 100 the viewport*/
+    min-height: 100vh;
+}
+
+/***** Grid System *****/
+
+.body{
+    /*4x8 grid*/
+    grid-template-rows: 100vh repeat(3, min-content);
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(8,1fr);
+
+}
