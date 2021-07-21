@@ -1,1 +1,5 @@
-/***** Header *****/
+/***** main *****/
+
+.main{
+    grid-area: main;
+}

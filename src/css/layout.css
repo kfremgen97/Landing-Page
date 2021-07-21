@@ -2,9 +2,14 @@
 
 .body{
     /*4x8 grid*/
+    display: grid;
     grid-template-rows: 100vh repeat(3, min-content);
     grid-auto-rows: min-content;
     grid-template-columns: repeat(8,1fr);
+    grid-template-areas: "header header header header header header header header"
+                        "main main main main main main main main"
+                        "main main main main main main main main"
+                        "footer footer footer footer footer footer footer footer";
 }
 
 /***** Nav ********/
@@ -62,4 +67,17 @@
 .nav__link:active{
     /* add the border bottom color*/
     border-bottom-color: var(--primary);
+}
+
+/***** Header *****/
+
+.header{
+    /* height: 100vh; */
+    grid-area: header;
+}
+
+/******** Footer ********/
+
+.footer{
+    grid-area: footer;
 }
