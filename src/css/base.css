@@ -36,6 +36,8 @@ body{
     /*set the font proeprties for the web page*/
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-dark);
     line-height:1.6;
     /*set the min height to 100 the viewport*/
     min-height: 100vh;
