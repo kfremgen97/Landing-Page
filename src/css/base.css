@@ -42,13 +42,3 @@ body{
     /*set the min height to 100 the viewport*/
     min-height: 100vh;
 }
-
-/***** Grid System *****/
-
-.body{
-    /*4x8 grid*/
-    grid-template-rows: 100vh repeat(3, min-content);
-    grid-auto-rows: min-content;
-    grid-template-columns: repeat(8,1fr);
-
-}

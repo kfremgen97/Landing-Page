@@ -1,5 +1,6 @@
 /***** Imports *****/
 
 @import url('base.css');
-@import url('landing-page.css');
+@import url('layout.css');
+@import url('pages.css');
 @import url('components.css');
