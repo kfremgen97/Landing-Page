@@ -1,0 +1,49 @@
+/******* Button *******/
+
+.button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    outline: none;
+    transition: all .2s;
+}
+
+.button--light{
+    background-color: var(--text-light);
+    color: var(--primary);
+}
+
+
+.button--animation{
+     /*the shorthand animation property to specify the animation-name animation-duration and animation-timing-function and the delay
+    set the animation-fill-mode to backwards.This applies the first keyframe properties to the element and retains during delay.*/
+    animation: moveInBottom 2s 1s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+/* Button move link states */
+.button--move-link,
+.button--move-link:link,
+.button--move-link:visited{
+    /*remove any text decoration*/
+    text-decoration: none;
+
+}
+
+.button--move-link:focus{
+    /*set the outline to transparent
+    set the box shadow to have a spread radius of .2rem with the primary light color*/
+    outline: transparent;
+    box-shadow: 0 0 0 .2rem var(--primary-light);
+}
+
+.button--move-link:hover{
+    /*translate the button in the y directions*/
+    transform: translateY(-.3rem);
+}
+
+.button--move-link:active{
+    /*translate the button in the y directions*/
+    transform: translateY(-.1rem);
+}
+

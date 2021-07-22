@@ -1,0 +1,91 @@
+/***** Margin Bottom ****/
+
+.mb--large{
+    margin-bottom: 3rem;
+}
+
+.mb--medium{
+    margin-bottom: 2rem;
+}
+
+.mb--small{
+    margin-bottom: 1rem;
+}
+
+/***** Key Frames *****/
+
+/*create animation of moveInRight*/
+@keyframes moveInRight {
+    /*beginning of animation*/
+    0%{
+        /*set the opacity to 0*/
+        opacity: 0;
+        /*translate in the x directions*/
+        transform: translateX(-10rem);
+    }
+
+    /*80% done with animation*/
+    80%{
+        /*translate in the x directions*/
+        transform: translateX(1rem);
+    }
+
+    /*end of animation*/
+    100%{
+     /*set the opacity to 100*/
+     opacity: 100;
+     /*translate in the x directions*/
+     transform: translateX(0);
+    }
+}
+
+ /*create animation of moveInLeft*/
+@keyframes moveInLeft {
+    /*beginning of animation*/
+    0%{
+        /*set the opacity to 0*/
+        opacity: 0;
+        /*translate in the x directions*/
+        transform: translateX(10rem);
+    }
+
+    /*80% done with animation*/
+    80%{
+        /*translate in the x directions*/
+        transform: translateX(-1rem);
+    }
+
+    /*end of animation*/
+    100%{
+     /*set the opacity to 100*/
+     opacity: 100;
+     /*translate in the x directions*/
+     transform: translateX(0);
+    }
+    
+}
+
+/*create an animation to moveInBottom*/
+@keyframes moveInBottom {
+        /*beginning of animation*/
+        0%{
+            /*set the opacity to 0*/
+            opacity: 0;
+            /*translate in the x directions*/
+            transform: translateY(1rem);
+        }
+    
+        /*80% done with animation*/
+        80%{
+            /*translate in the x directions*/
+            transform: translateY(-1rem);
+        }
+    
+        /*end of animation*/
+        100%{
+         /*set the opacity to 100*/
+         opacity: 100;
+         /*translate in the x directions*/
+         transform: translateY(0);
+        }
+}

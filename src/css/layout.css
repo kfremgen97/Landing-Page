@@ -72,8 +72,21 @@
 /***** Header *****/
 
 .header{
-    /* height: 100vh; */
+    /*set the grid area*/
     grid-area: header;
+    /*set the font color*/
+    color: var(--text-light);
+    /*set the background image*/
+    background-image: linear-gradient(to bottom right, rgba(110, 231, 183, 90%),rgb(4, 120, 87,90%)),
+                     url('../assets/img/waterfall.jpg');
+    background-size: cover;
+    background-position: center;
+    /*set the display to flex and the direction to column
+    center along the maina nd cross axis*/
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /******** Footer ********/

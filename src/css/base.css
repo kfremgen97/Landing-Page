@@ -42,3 +42,36 @@ body{
     /*set the min height to 100 the viewport*/
     min-height: 100vh;
 }
+
+/**** Typography ******/
+
+.heading{
+    text-transform: uppercase;
+}
+
+.heading--1{
+    font-size: 4rem;
+}
+
+.heading--3{
+    font-size: 3rem;
+}
+
+.heading--5{
+
+}
+
+.heading--main{
+    /*set the font weight
+    set the animation to ease in from the left*/
+    font-weight: 700;
+    animation: moveInLeft 2s ease-in-out;
+}
+
+.heading--sub{
+    /*set the font weight
+    set the animation to ease in from the right*/
+    font-weight: 100;
+    animation: moveInRight 2s ease-in-out;
+}
+
