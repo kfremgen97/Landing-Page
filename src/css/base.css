@@ -5,8 +5,8 @@
     --primary-light: #6EE7B7;
     --primary: #10B981;
     --primary-dark: #047857;
-    --text-light: #eeeeee;
-    --text-dark: #111111;
+    --text-light: #f6f6f6;
+    --text-dark: #555555;
 }
 
 /***** All Selector *****/
@@ -75,3 +75,18 @@ body{
     animation: moveInRight 2s ease-in-out;
 }
 
+.heading--green{
+    color: var(--primary);
+}
+
+.heading--white{
+    color: var(--text-light);
+}
+
+/***** Paragraph *****/
+
+
+.paragraph:not(:last-child){
+    /*set any sibling paragraphs that is not the last child to have a margin bottom*/
+    margin-bottom: 4rem;
+}

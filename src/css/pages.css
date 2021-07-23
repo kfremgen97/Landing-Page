@@ -1,5 +1,75 @@
-/***** main *****/
+/********** LANDING PAGE *********/
+
+/***** Main *****/
 
 .main{
     grid-area: main;
+}
+
+
+/***** About section ******/
+
+.about{
+    /*add padding around the section
+    set the display to a 2 x 2 grid*/
+    padding:10rem 2rem;
+    display: grid;
+    grid-template-rows: repeat(2,min-content);
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about .heading{
+    /*set the headint o be the entire first row*/
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+.about__info{
+    /*set the about info to the second row first column*/
+    grid-column: 1/2;
+    grid-row: 2/-1;
+}
+
+.about__photos{
+    /*set the about photos to the second row second column*/
+    padding: 2rem;
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+    /*position elment relative to its current position for child elments to be positioned*/
+    position: relative;
+}
+
+.about__photo{
+    /*position about photo absolutely to its closest positioned parent,i.e about__photos
+    set the height to 25rem and the width to auto to keep resolution*/
+   position: absolute;
+   height: 25rem;
+   width: auto;
+}
+
+
+.about__photo--1{
+    /*position photo*/
+    height: 25rem;
+    width:auto;
+    top:45%;
+    left:30%;
+    transform: translate(-50%,-50%);
+    z-index:1;
+}
+
+.about__photo--2{
+    /*position photo*/
+    top:55%;
+    left:60%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+}
+
+.about__photo--3{
+    /*position photo*/
+    top:25%;
+    left:45%;
+    transform: translate(-50%,-50%);
+    z-index:2;
 }

@@ -20,12 +20,12 @@
     width: 100vw;
     /*set the nav text and background color*/
     color: var(--text-light);
-    background-color: var(--text-dark);
-    opacity: 95%;
+    background-color: #000000;
+    opacity: 90%;
     /*set the nav to be fixed to the top of the viewport*/
     position: fixed;
     top:0;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* Navigation list */

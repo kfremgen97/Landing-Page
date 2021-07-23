@@ -1,18 +1,52 @@
 /******* Button *******/
 
 .button{
-    display: inline-block;
+    /*set the font size to inherit
+    add a 1rem vertical and 2rem horizontal padding
+    add a border radius of 2rem
+    remove the outline
+    set all proeprties to have a transition of .2 seconds*/
+    font-size: inherit;
     padding: 1rem 2rem;
     border-radius: 2rem;
     outline: none;
     transition: all .2s;
+    /*set the display to flex
+    set the width to max-content to avoid flexbox from stretching entire available space
+    align items in the center*/
+    display: flex;
+    align-items: center;
+    width: max-content;
 }
 
-.button--light{
+.button > svg {
+    /*set the widht and height*/
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.button--white{
+    /*set the background to white
+    set the text to green*/
     background-color: var(--text-light);
     color: var(--primary);
 }
 
+.button--white > svg{
+    fill: var(--primary);
+}
+
+.button--green{
+    /*set the background to green
+    set the text to white*/
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.button--green > svg{
+    fill: var(--text-light);
+}
 
 .button--animation{
      /*the shorthand animation property to specify the animation-name animation-duration and animation-timing-function and the delay
@@ -21,29 +55,29 @@
     animation-fill-mode: backwards;
 }
 
-/* Button move link states */
-.button--move-link,
-.button--move-link:link,
-.button--move-link:visited{
+/* Button link states */
+.button--link,
+.button--link:link,
+.button--link:visited{
     /*remove any text decoration*/
     text-decoration: none;
-
 }
 
-.button--move-link:focus{
+.button--link:focus{
     /*set the outline to transparent
     set the box shadow to have a spread radius of .2rem with the primary light color*/
     outline: transparent;
     box-shadow: 0 0 0 .2rem var(--primary-light);
 }
 
-.button--move-link:hover{
+.button--link:hover{
     /*translate the button in the y directions*/
     transform: translateY(-.3rem);
 }
 
-.button--move-link:active{
+.button--link:active{
     /*translate the button in the y directions*/
     transform: translateY(-.1rem);
 }
+
 
