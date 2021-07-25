@@ -12,13 +12,13 @@
 .about{
     /*add padding around the section
     set the display to a 2 x 2 grid*/
-    padding:10rem 2rem;
+    padding:8rem 2rem 10rem 2rem;
     display: grid;
     grid-template-rows: repeat(2,min-content);
     grid-template-columns: repeat(2,1fr);
 }
 
-.about .heading{
+.about .heading--3{
     /*set the headint o be the entire first row*/
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -32,7 +32,7 @@
 
 .about__photos{
     /*set the about photos to the second row second column*/
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 4rem;
     grid-column: 2/-1;
     grid-row: 2/-1;
     /*position elment relative to its current position for child elments to be positioned*/
@@ -45,31 +45,73 @@
    position: absolute;
    height: 25rem;
    width: auto;
+   transition:all .2s;
 }
 
+.about__photo:hover{
+    outline: .5rem solid var(--primary);
+    transform: scale(1.25);
+    z-index: 5;
+}
 
 .about__photo--1{
     /*position photo*/
-    height: 25rem;
-    width:auto;
-    top:45%;
-    left:30%;
-    transform: translate(-50%,-50%);
-    z-index:1;
+    top: 10%;
+    left: 5rem;
+    z-index: 1;
 }
 
 .about__photo--2{
     /*position photo*/
-    top:55%;
-    left:60%;
-    transform: translate(-50%,-50%);
-    z-index:2;
+    top: 20%;
+    left: 20rem;
+    z-index: 2;
 }
 
 .about__photo--3{
     /*position photo*/
-    top:25%;
-    left:45%;
-    transform: translate(-50%,-50%);
-    z-index:2;
+    top: 5%;
+    left: 15rem;
+    z-index: 2;
+}
+
+/***** Features section *****/
+
+.features{
+    /*set the bacground image to a linear gradient
+    add 10rem padding vertically and 2 rem horizontally*/
+    background-image: linear-gradient(to bottom right, var(--primary-light),var(--primary-dark));
+    padding: 8rem 2rem 10rem 2rem;
+}
+
+.features__box{
+    /*set the display to grid
+    set the columns to repeat auto-fit with a min of 27rem width and a max of the free space,
+        this ensures if an element can not fit in the row it goes to the next row
+    align the items in the cells to the center horizontally*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 4rem 2rem;
+    justify-items: center;
+}
+
+.features .heading--3{
+    text-align: center;
+}
+
+/****** Packages Section *****/
+
+.packages{
+    padding: 8rem 2rem 10rem 2rem;
+}
+
+.packages__box{
+   /*set the display to grid
+    set the columns to repeat auto-fit with a min of 27rem width and a max of the free space,
+        this ensures if an element can not fit in the row it goes to the next row
+    align the items in the cells to the center horizontally*/
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-gap: 4rem 2rem;
+    justify-items:center;
 }

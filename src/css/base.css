@@ -47,6 +47,7 @@ body{
 
 .heading{
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .heading--1{
