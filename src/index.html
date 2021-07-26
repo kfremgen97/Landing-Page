@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/index.js" type="module" defer ></script>
 </head>
 
 <!-- body -->
@@ -18,7 +19,7 @@
     <!-- nav -->
     <nav class="nav">
         <ul class="nav__list">
-            <li class="nav__item">
+            <!-- <li class="nav__item">
                 <a class="nav__link" href="#about">About</a>
             </li>
             <li class="nav__item">
@@ -32,7 +33,7 @@
             </li>
             <li class="nav__item">
                 <a class="nav__link" href="#booking">Booking</a>
-            </li>
+            </li> -->
         </ul>
     </nav>
     <!-- header -->
@@ -44,7 +45,7 @@
     <!-- main -->
     <main class="main">
         <!-- about section -->
-        <section id="about" class="about">
+        <section class="about" data-id="about">
             <h3 class="heading heading--3 heading--green mb--large text--center">Tours for living on the wild side</h3>
             <div class="about__info">
                 <p class="paragraph">fringilla eu lacinia sit amet, aliquet quis sapien. Proin pellentesque, metus ut
@@ -82,7 +83,7 @@
             </div>
         </section>
         <!-- features -->
-        <section id="features" class="features">
+        <section class="features" data-id="features">
             <h3 class="heading heading--3 heading--white mb--large">Features</h3>
             <div class="features__box">
                 <article class="feature">
@@ -136,7 +137,7 @@
             </div>
         </section>
         <!-- packages -->
-        <section id="packages" class="packages">
+        <section  class="packages" data-id="packages">
             <h3 class="heading heading--3 heading--green text--center mb--large">Popular packages</h3>
             <div class="packages__box">
             <article class="package">
@@ -175,7 +176,7 @@
             </div>
         </section>
         <!-- stories -->
-        <section id="stories" class="stories">
+        <section  class="stories" data-id="stories">
             <h3 class="heading heading--3 heading--white text-center mb--large">User Stories</h3>
             <article class="story">
                 <h5 class=story__title>A hiking trip to remember!</h5>
@@ -197,7 +198,7 @@
             </article>
         </section> 
         <!-- booking -->
-        <section id="booking" class="booking">
+        <section  class="booking" data-id="booking">
             <form class="form">
                 <label class="form__label" for="input-email">Email:</label>
                 <input id="input-email" class="form__input form__input--email" placeholder="email" type="email" required>
