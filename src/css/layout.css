@@ -69,6 +69,10 @@
     border-bottom-color: var(--primary);
 }
 
+.nav__link--active{
+    color: var(--primary) !important;
+}
+
 /***** Header *****/
 
 .header{
