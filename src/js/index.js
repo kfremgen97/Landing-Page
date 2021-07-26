@@ -1,4 +1,5 @@
 /** Elements */
+const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section');
 const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
@@ -60,35 +61,43 @@ nav.addEventListener('click', (event) => {
 // Intersection observer options
 // Set the root to null so the viewport becomes the intersection listener
 // Set the threshold to .25, for the observer to fire when 25%  in viewport
-// const options = {
-//     root: null,
-//     threshold: [0.25],
-// };
+const options = {
+    root: null,
+    threshold: [0.45],
+};
 
-// // Intersection call back
-// const observerCallBack = function (entries) {
-//     console.log(entries);
+// Intersection call back
+const observerCallBack = function (entries) {
+    console.log(entries);
 
-//     // Since ther eis only one threshold get the first element in the array
-//     // Check if it is interecting with the observer, else return function
-//     if (!entries[0].isIntersecting) return;
+    // Since there is only one threshold get the first element in the array
+    // Check if it is interecting with the observer, else return function
+    if (!entries[0].isIntersecting) return;
 
-//     // Remove the active class list from other nav links
-//     navList.querySelectorAll('.nav__link').forEach((item) => {
-//         item.classList.remove('nav__link--active');
-//     });
+    // Remove the active class list from other nav links
+    navList.querySelectorAll('.nav__link').forEach((item) => {
+        item.classList.remove('nav__link--active');
+    });
 
-//     // Get the target dataset id to style the link
-//     const sectionId = entries[0].target.dataset.id;
-//     navList.querySelector(`.nav__link[href='#${sectionId}']`).classList.add('nav__link--active');
-// };
+    // check if header is intersecting with observer, return
+    if (entries[0].target.classList.contains('header')) return;
 
-// // Create the observer
-// const observer = new IntersectionObserver(observerCallBack, options);
+    // If intersection is a section, add the active style to the corresponding link
+    // Get the target dataset id to style the link
+    const sectionId = entries[0].target.dataset.id;
+    navList.querySelector(`.nav__link[href='#${sectionId}']`).classList.add('nav__link--active');
+};
 
-// sections.forEach((section) => {
-//     observer.observe(section);
-// });
+// Create the observer
+const observer = new IntersectionObserver(observerCallBack, options);
+
+// Add header to observer
+observer.observe(header);
+
+// Add sections to observer
+sections.forEach((section) => {
+    observer.observe(section);
+});
 
 /** Functions to call immediatley */
 
