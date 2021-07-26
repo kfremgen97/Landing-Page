@@ -55,6 +55,41 @@ nav.addEventListener('click', (event) => {
     });
 });
 
+/** Observers */
+
+// Intersection observer options
+// Set the root to null so the viewport becomes the intersection listener
+// Set the threshold to .25, for the observer to fire when 25%  in viewport
+// const options = {
+//     root: null,
+//     threshold: [0.25],
+// };
+
+// // Intersection call back
+// const observerCallBack = function (entries) {
+//     console.log(entries);
+
+//     // Since ther eis only one threshold get the first element in the array
+//     // Check if it is interecting with the observer, else return function
+//     if (!entries[0].isIntersecting) return;
+
+//     // Remove the active class list from other nav links
+//     navList.querySelectorAll('.nav__link').forEach((item) => {
+//         item.classList.remove('nav__link--active');
+//     });
+
+//     // Get the target dataset id to style the link
+//     const sectionId = entries[0].target.dataset.id;
+//     navList.querySelector(`.nav__link[href='#${sectionId}']`).classList.add('nav__link--active');
+// };
+
+// // Create the observer
+// const observer = new IntersectionObserver(observerCallBack, options);
+
+// sections.forEach((section) => {
+//     observer.observe(section);
+// });
+
 /** Functions to call immediatley */
 
 // Populate the nav list
