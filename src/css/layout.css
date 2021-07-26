@@ -77,7 +77,7 @@
     /*set the font color*/
     color: var(--text-light);
     /*set the background image*/
-    background-image: linear-gradient(to bottom right, rgba(110, 231, 183, 90%),rgb(4, 120, 87,90%)),
+    background-image: linear-gradient(to bottom right, rgba(81, 207, 102, 90%),rgba(43, 138, 62,90%)),
                      url('../assets/img/waterfall.jpg');
     background-size: cover;
     background-position: center;

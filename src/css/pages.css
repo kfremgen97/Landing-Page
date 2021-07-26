@@ -130,3 +130,20 @@
     flex-direction: column;
     align-items: center;
 }
+
+/****** Book section ******/
+
+.booking{
+    padding: 10rem 2rem;
+    /*set the background image, position, and size*/
+    background-image: linear-gradient(to bottom right, rgba(246, 246, 246, 80%), rgba(85,85,85,80%)),
+                        url('../assets/img/northern-lights.jpg');
+    background-size: cover;
+    background-position: center;
+    /*set the display to flex
+    justify the items on the main axis in the center
+    align the items on the cross axis in the center*/
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}

@@ -199,10 +199,13 @@
         <!-- booking -->
         <section id="booking" class="booking">
             <form class="form">
-                <input class="form__input form__input--email" type="email" required>
-                <input class="form__input form__input--text" type="text" required>
-                <input class="form__input form__input--date" type="date" required>
-                <button class="form__submit">Book Now!</button>
+                <label class="form__label" for="input-email">Email:</label>
+                <input id="input-email" class="form__input form__input--email" placeholder="email" type="email" required>
+                <label class="form__label" for="input-name">Name:</label>
+                <input id="input-text" class="form__input form__input--text" placeholder="name" type="text" required>
+                <label class="form__label" for="input-date">Date:</label>
+                <input id="input-date" class="form__input form__input--date" type="date" required>
+                <button class="button button--green button--form">Book Now!</button>
             </form>
         </section> 
     </main>
