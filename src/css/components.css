@@ -157,3 +157,55 @@
 }
 
 /***** Story *****/
+
+.story{
+    /*add a padding of 2rem and a border-radius to clip the edges
+    set the background color
+    give each story a width of 75% of its parent element
+    add a box shadow to give i a popping affect*/
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--text-light);
+    width: 75%;
+    box-shadow: 1rem 1 rem 2rem var(--text-dark);
+   /*set the display to grid
+    create a 2 x 2 grid with a gao of 2rem horizontally and 1 rem vertically
+    align the items in the cells to the center horizontally*/
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2,min-content);
+    grid-auto-rows: min-content;
+    grid-gap: 1rem 2rem;
+    align-items: center;
+}
+
+.story:not(:last-child){
+    /*for every story component that is not the last child, add a margin bottom of 4rem*/
+    margin-bottom: 4rem;
+}
+
+
+.story__text{
+    /*set the grid column*/
+    font-size:1.6rem;
+    font-family: inherit;
+    grid-column: 2/3;
+}
+
+.story__title{
+   font-size: 2rem;
+   font-family: inherit;
+    /*set the grid column*/
+    grid-column: 2/3;
+}
+
+.story__img{
+    /*fill the svg to the primary color
+    give it a width and height of 10 rem
+    specify the grid column and rows*/
+    fill: var(--primary);
+    height:10rem;
+    width: 10rem;
+    grid-column:1/2;
+    grid-row: 1/-1;
+}

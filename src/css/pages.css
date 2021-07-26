@@ -99,7 +99,7 @@
     text-align: center;
 }
 
-/****** Packages Section *****/
+/****** Packages section *****/
 
 .packages{
     padding: 8rem 2rem 10rem 2rem;
@@ -114,4 +114,19 @@
     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     grid-gap: 4rem 2rem;
     justify-items:center;
+}
+
+/****** Story section *****/
+
+.stories{
+    /*set the bacground image to a linear gradient
+    add 10rem padding vertically and 2 rem horizontally*/
+    background-image: linear-gradient(to bottom right, var(--primary-light),var(--primary-dark));
+    padding: 8rem 2rem 10rem 2rem;
+    /*set the display to flex
+    set the flex direction to column
+    align the items on the cross axis in the center*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
