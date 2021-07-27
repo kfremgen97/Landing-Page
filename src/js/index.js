@@ -3,6 +3,7 @@ const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section');
 const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
+const form = document.querySelector('.form');
 
 // Create the nav item element
 const createNavItem = function (sectionId) {
@@ -54,6 +55,18 @@ nav.addEventListener('click', (event) => {
     section.scrollIntoView({
         behavior: 'smooth',
     });
+});
+
+// Add event listener for form submit
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    // Create the form data object
+    const formData = new FormData(form);
+    // Get the form data values
+    const [email, name, date] = formData.values();
+    // Present alert
+    alert(`Congradulations ${name}, your hike is booked for ${date}.
+Please check your email,${email}, for confimration.`);
 });
 
 /** Observers */
