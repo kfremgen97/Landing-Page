@@ -6,6 +6,7 @@ const navList = document.querySelector('.nav__list');
 const form = document.querySelector('.form');
 const headerButton = document.querySelector('.button--header');
 const aboutButton = document.querySelector('.button--about');
+const topButton = document.querySelector('.button--top');
 
 // Create the nav item element
 const createNavItem = function (sectionId) {
@@ -104,6 +105,33 @@ form.addEventListener('submit', (event) => {
     // Present alert
     alert(`Congradulations ${name}, your hike is booked for ${date}.
 Please check your email,${email}, for confimration.`);
+});
+
+// Add an event listener for the top button
+topButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    // Get the nav links
+    const navItems = navList.querySelectorAll('.nav__link');
+
+    // Remove the active class list from other nav links
+    navItems.forEach((item) => {
+        item.classList.remove('nav__link--active');
+    });
+
+    // Scroll into view
+    header.scrollIntoView({
+        behavior: 'smooth',
+    });
+});
+
+// Add event listener for scroll
+window.addEventListener('scroll', () => {
+    // Check if the window scroll Y position is greater than the header element height
+    if (window.pageYOffset > header.offsetHeight) {
+        topButton.classList.remove('hidden');
+    } else {
+        topButton.classList.add('hidden');
+    }
 });
 
 /** Observers */

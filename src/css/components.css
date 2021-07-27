@@ -27,6 +27,18 @@
     margin-left: 1rem;
 }
 
+.button--top{
+    position: fixed;
+    z-index: 100;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: .2rem .2rem var(--text-dark);
+}
+
+.button--top > svg{
+    margin-left: 0;
+}
+
 .button--white{
     /*set the background to white
     set the text to green*/

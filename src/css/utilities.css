@@ -1,3 +1,9 @@
+/***** Visibility ******/
+
+.hidden {
+    display: none;
+}
+
 /***** Text center *****/
 
 .text--center{
