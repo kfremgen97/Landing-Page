@@ -101,7 +101,7 @@ body{
 
 /***** 900 px breakpoint *****/
 
-@media screen and (max-width: 65.25em) {
+@media screen and (max-width: 56.25em) {
     
     html{
         font-size: 50%;

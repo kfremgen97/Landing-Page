@@ -149,3 +149,41 @@
 }
 
 /********** Media Queries **********/
+
+/***** 900 px breakpoint *****/
+
+@media screen and (max-width: 56.25em){
+
+    .about{
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        
+    }
+
+    .about__info{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        margin-bottom: 2rem;
+    }
+
+    .about__photos{
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__photo{
+        position: relative;
+    }
+
+
+    .about__photo--1,
+    .about__photo--2,
+    .about__photo--3{
+        top:0;
+        left: 0;
+    }
+}
