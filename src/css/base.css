@@ -96,3 +96,14 @@ body{
     /*set any sibling paragraphs that is not the last child to have a margin bottom*/
     margin-bottom: 4rem;
 }
+
+/********** Media Queries **********/
+
+/***** 900 px breakpoint *****/
+
+@media screen and (max-width: 65.25em) {
+    
+    html{
+        font-size: 50%;
+    }
+}

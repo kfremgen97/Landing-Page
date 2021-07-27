@@ -296,3 +296,5 @@
         add a box shadow with the primary color*/
     box-shadow: 0 0 0 .2rem var(--primary);
 }
+
+/********** Media Queries **********/
