@@ -39,7 +39,7 @@ nav.addEventListener('click', (event) => {
     console.log(event);
     event.preventDefault();
 
-    // If the event target, does not have a class lsit of nav__link return
+    // If the event target, does not have a class list of nav__link return
     if (!event.target.classList.contains('nav__link')) return;
 
     // Get the section via id based on the href attribute of the target
@@ -61,26 +61,32 @@ nav.addEventListener('click', (event) => {
 
 // Add event listener for header button
 headerButton.addEventListener('click', (event) => {
+    console.log(event);
     event.preventDefault();
 
-    // Select all the items in the nav list
-    const linkItems = navList.querySelectorAll('.nav__link');
+    // Get the nav links
+    const navItems = navList.querySelectorAll('.nav__link');
 
-    linkItems.forEach((item) => {
-        // Remove the active class from the other links
+    // Remove the active class list from other nav links
+    navItems.querySelectorAll('.nav__link').forEach((item) => {
         item.classList.remove('nav__link--active');
     });
 
     // Set the packages section to the active link
-    linkItems.forEach((item) => {
+    for (let index = 0; index < navItems.length; index += 1) {
+        const item = navItems[index];
+        // If the item href attribute is packages
         if (item.getAttribute('href') === '#packages') {
             item.classList.add('nav__link--active');
             // Scroll into view
             document.querySelector('.packages').scrollIntoView({
                 behavior: 'smooth',
             });
+
+            // break out of the loop
+            break;
         }
-    });
+    }
 });
 
 // Add event listener for about button
