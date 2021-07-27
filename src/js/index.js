@@ -4,6 +4,7 @@ const sections = document.querySelectorAll('section');
 const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
 const form = document.querySelector('.form');
+const headerButton = document.querySelector('.button--header');
 
 // Create the nav item element
 const createNavItem = function (sectionId) {
@@ -54,6 +55,30 @@ nav.addEventListener('click', (event) => {
     // Scroll into view
     section.scrollIntoView({
         behavior: 'smooth',
+    });
+});
+
+// Add event listener for header button
+headerButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Select all the items in the nav list
+    const linkItems = navList.querySelectorAll('.nav__link');
+
+    linkItems.forEach((item) => {
+        // Remove the active class from the other links
+        item.classList.remove('nav__link--active');
+    });
+
+    // Set the packages section to the active link
+    linkItems.forEach((item) => {
+        if (item.getAttribute('href') === '#packages') {
+            item.classList.add('nav__link--active');
+            // Scroll into view
+            document.querySelector('.packages').scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
     });
 });
 
