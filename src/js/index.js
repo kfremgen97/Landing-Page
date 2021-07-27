@@ -69,7 +69,7 @@ headerButton.addEventListener('click', (event) => {
     const navItems = navList.querySelectorAll('.nav__link');
 
     // Remove the active class list from other nav links
-    navItems.querySelectorAll('.nav__link').forEach((item) => {
+    navItems.forEach((item) => {
         item.classList.remove('nav__link--active');
     });
 
