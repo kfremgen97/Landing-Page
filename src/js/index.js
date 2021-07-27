@@ -5,6 +5,7 @@ const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
 const form = document.querySelector('.form');
 const headerButton = document.querySelector('.button--header');
+const aboutButton = document.querySelector('.button--about');
 
 // Create the nav item element
 const createNavItem = function (sectionId) {
@@ -80,6 +81,11 @@ headerButton.addEventListener('click', (event) => {
             });
         }
     });
+});
+
+// Add event listener for about button
+aboutButton.addEventListener('click', (event) => {
+    event.preventDefault();
 });
 
 // Add event listener for form submit
