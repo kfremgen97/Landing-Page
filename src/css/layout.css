@@ -25,10 +25,11 @@
     /*set the nav to be fixed to the top of the viewport*/
     position: fixed;
     top:0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .nav__button{
+    display: none;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -129,3 +130,23 @@
 }
 
 /********** Media Queries **********/
+
+@media screen and (max-width: 37.5em){
+    .nav__button{
+        display: inline-block;
+    }
+
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+
+    }
+
+    .nav__item{
+        font-size: 2rem;
+        margin: 0;
+        padding: 2rem;
+    }
+}
