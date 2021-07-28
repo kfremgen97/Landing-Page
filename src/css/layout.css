@@ -26,10 +26,17 @@
     position: fixed;
     top:0;
     z-index: 100;
+    /*create a grid with the dminesions 1x2*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,min-content);
 }
 
 .nav__button{
     display: none;
+    width: min-content;
+    right: 2rem;
+    bottom: 2rem;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -135,10 +142,14 @@
 
     .nav__button{
         display: inline-block;
+        /*set the element column and row placement*/
+        justify-self: flex-end;
+        grid-column: 1/-1;
+        grid-row: 1/2;
     }
 
     .nav__list{
-        visibility: collapse;
+        visibility: hidden;
         height:0;
         opacity: 0;
         flex-direction: column;
@@ -153,9 +164,14 @@
     }
 
     .nav__item{
+        display: none;
         font-size: 2rem;
         margin: 0;
         padding: 2rem;
+    }
+
+    .nav__list--active .nav__item{
+        display: block;
     }
 
 }

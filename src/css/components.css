@@ -29,7 +29,7 @@
 
 .button--top{
     position: fixed;
-    z-index: 100;
+    z-index: 50;
     bottom: 2rem;
     right: 2rem;
     box-shadow: .2rem .2rem var(--text-dark);
