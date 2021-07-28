@@ -5,6 +5,7 @@ class View {
     sections = document.querySelectorAll('section');
     packageSection = document.querySelector('.packages');
     nav = document.querySelector('.nav');
+    navButton = document.querySelector('.nav__button');
     navList = document.querySelector('.nav__list');
     form = document.querySelector('.form');
     headerButton = document.querySelector('.button--header');
@@ -64,6 +65,16 @@ class View {
         alert(message);
     }
 
+    // Toggle nav button
+    toggleNavButton(){
+        this.navButton.classList.toggle('nav__button--active');
+    }
+    
+    // Toggle nav list
+    toggleNavList(){
+        this.navList.classList.toggle('nav__list--active')
+    }
+
     // Add event listner to nav for item click
     navPublisher(handler) {
         this.nav.addEventListener('click', function (event) {
@@ -72,6 +83,15 @@ class View {
             handler(event.target);
         });
     }
+
+    // Add event listener for nav button click
+    navButtonPublisher(handler){
+        this.navButton.addEventListener('click',function(event){
+            console.log(event);
+            event.preventDefault();
+            handler();
+        })
+    };
 
     // Add event listener for header button
     headerButtonPublisher(handler) {

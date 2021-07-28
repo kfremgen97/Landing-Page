@@ -132,16 +132,24 @@
 /********** Media Queries **********/
 
 @media screen and (max-width: 37.5em){
+
     .nav__button{
         display: inline-block;
     }
 
     .nav__list{
-        display: flex;
+        visibility: collapse;
+        height:0;
+        opacity: 0;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        transition: all .2s;
+    }
 
+    .nav__list--active{
+       visibility: visible;
+       height:100vh;
+       opacity: 100%;
     }
 
     .nav__item{
@@ -149,4 +157,5 @@
         margin: 0;
         padding: 2rem;
     }
+
 }

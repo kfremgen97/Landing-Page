@@ -19,10 +19,20 @@ const navLinkHandler = function (link) {
     view.scrollInto(section);
 };
 
+// Nav button handler
+const navButtonHandler = function () {
+    // Toggle the nav button
+    view.toggleNavButton();
+
+    // Toggle the nav list
+    view.toggleNavList();
+};
+
 // Top button handler
 const topButtonHandler = function () {
     // Reset nav links
     view.resetNavLinks();
+
     // Scroll to header
     view.scrollInto(view.header);
 };
@@ -67,7 +77,6 @@ const scrollHandler = function (windowScrollPosition, headerHeight, topButton) {
 
 // Section observer handler
 const sectionObserverHandler = function (entries) {
-
     // Since there is only one threshold get the first element in the array
     // Check if it is interecting with the observer, else return function
     if (!entries[0].isIntersecting) return;
@@ -96,3 +105,4 @@ view.headerButtonPublisher(headerButtonHandler);
 view.formPublisher(formSubmissionHandler);
 view.scrollPublisher(scrollHandler);
 view.addSectionObserver(sectionObserverHandler);
+view.navButtonPublisher(navButtonHandler);
