@@ -302,8 +302,20 @@
 /***** 900 px breakpoint *****/
 
 @media screen and (max-width: 56.25em){
-
     .form{
         width: 75%;
+    }
+}
+
+/****** 600 px breakpoint ******/
+
+@media screen and (max-width: 37.5em){
+
+    .story{
+        width: 100%;
+    }
+    
+    .form{
+        width: 100%;
     }
 }
