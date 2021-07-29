@@ -41,17 +41,8 @@ class View {
         });
     };
 
-    // Reset the nav links
-    resetNavLinks() {
-        // Remove the active class list from other nav links
-        this.navList.querySelectorAll('.nav__link').forEach((item) => {
-            item.classList.remove('nav__link--active');
-        });
-    }
-
-    // Set the target nav link to active
-    setActiveNavLink(link) {
-        link.classList.add('nav__link--active');
+    getSection(id) {
+        return document.querySelector(id);
     }
 
     //Scroll the element into view
@@ -65,14 +56,39 @@ class View {
         alert(message);
     }
 
+    // Reset the nav links
+    resetNavLinks() {
+        // Remove the active class list from other nav links
+        this.navList.querySelectorAll('.nav__link').forEach((item) => {
+            item.classList.remove('nav__link--active');
+        });
+    }
+
+    // Set the target nav link to active
+    setActiveNavLink(link) {
+        link.classList.add('nav__link--active');
+    }
+
+    removeActiveNavLink(link) {
+        link.classList.remove('nav__link--active');
+    }
+
     // Toggle nav button
-    toggleNavButton(){
+    toggleNavButton() {
         this.navButton.classList.toggle('nav__button--active');
     }
-    
+
     // Toggle nav list
-    toggleNavList(){
+    toggleNavList() {
         this.navList.classList.toggle('nav__list--active')
+    }
+
+    showTopButton() {
+        this.topButton.classList.remove('hidden');
+    }
+
+    hideTopButton() {
+        this.topButton.classList.add('hidden');
     }
 
     // Add event listner to nav for item click
@@ -85,8 +101,8 @@ class View {
     }
 
     // Add event listener for nav button click
-    navButtonPublisher(handler){
-        this.navButton.addEventListener('click',function(event){
+    navButtonPublisher(handler) {
+        this.navButton.addEventListener('click', function (event) {
             console.log(event);
             event.preventDefault();
             handler();
@@ -129,30 +145,8 @@ class View {
 
     // Add event listener for scroll
     scrollPublisher(handler) {
-        window.addEventListener('scroll', () => {
-            handler(window.pageYOffset, this.header.offsetHeight, this.topButton);
-        });
-    }
-
-    // Add section observer
-    addSectionObserver(observerCallback) {
-        // Intersection observer options
-        // Set the root to null so the viewport becomes the intersection listener
-        // Set the threshold to .25, for the observer to fire when 25%  in viewport
-        const options = {
-            root: null,
-            threshold: [0.45],
-        };
-
-        // Create the observer
-        const observer = new IntersectionObserver(observerCallback, options);
-
-        // Add header to observer
-        observer.observe(this.header);
-
-        // Add sections to observer
-        this.sections.forEach((section) => {
-            observer.observe(section);
+        window.addEventListener('scroll', (event) => {
+            handler(window.pageYOffset);
         });
     }
 }

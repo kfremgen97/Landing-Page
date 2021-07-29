@@ -10,6 +10,7 @@
 /***** About section ******/
 
 .about{
+    min-height: 100vh;
     /*add padding around the section
     set the display to a 2 x 2 grid*/
     padding:8rem 2rem 10rem 2rem;
@@ -78,6 +79,7 @@
 /***** Features section *****/
 
 .features{
+    min-height: 100vh;
     /*set the bacground image to a linear gradient
     add 10rem padding vertically and 2 rem horizontally*/
     background-image: linear-gradient(to bottom right, var(--primary-light),var(--primary-dark));
@@ -102,6 +104,7 @@
 /****** Packages section *****/
 
 .packages{
+    min-height: 100vh;
     padding: 8rem 2rem 10rem 2rem;
 }
 
@@ -119,6 +122,7 @@
 /****** Story section *****/
 
 .stories{
+    min-height: 100vh;
     /*set the bacground image to a linear gradient
     add 10rem padding vertically and 2 rem horizontally*/
     background-image: linear-gradient(to bottom right, var(--primary-light),var(--primary-dark));
@@ -134,6 +138,7 @@
 /****** Book section ******/
 
 .booking{
+    min-height: 100vh;
     padding: 10rem 2rem;
     /*set the background image, position, and size*/
     background-image: linear-gradient(to bottom right, rgba(246, 246, 246, 80%), rgba(85,85,85,80%)),
@@ -144,6 +149,7 @@
     justify the items on the main axis in the center
     align the items on the cross axis in the center*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center ;
 }

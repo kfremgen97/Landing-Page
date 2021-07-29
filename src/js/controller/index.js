@@ -7,7 +7,7 @@ const navLinkHandler = function (link) {
     if (!link.classList.contains('nav__link')) return;
 
     // Get the section via id based on the href attribute of the target
-    const section = document.querySelector(`${link.getAttribute('href')}`);
+    const section = view.getSection(link.getAttribute('href'));
 
     // Reset the nav links
     view.resetNavLinks();
@@ -66,33 +66,32 @@ Please check your email,${email}, for confimration.`);
 };
 
 // Scroll handler
-const scrollHandler = function (windowScrollPosition, headerHeight, topButton) {
+const scrollHandler = function (windowScrollPosition) {
+    // Hold the current section
+    let currentSection = '';
+
     // Check if the window scroll Y position is greater than the header element height
-    if (windowScrollPosition > headerHeight) {
-        topButton.classList.remove('hidden');
+    if (windowScrollPosition > view.header.offsetHeight) {
+        // Show the back to top button
+        view.showTopButton();
     } else {
-        topButton.classList.add('hidden');
+        // Hide the back to top button
+        view.hideTopButton();
     }
-};
 
-// Section observer handler
-const sectionObserverHandler = function (entries) {
-    // Since there is only one threshold get the first element in the array
-    // Check if it is interecting with the observer, else return function
-    if (!entries[0].isIntersecting) return;
+    // Check if the window scroll position is greater than the sections top position 
+    view.sections.forEach((section) => {
+        if (windowScrollPosition >= section.offsetTop - 100) {
+            // If it is set the current section
+            currentSection = section.dataset.id;
+        }
+    });
 
-    // Remove the active class list from other nav links
+    // Reset nav links
     view.resetNavLinks();
 
-    // check if header is intersecting with observer, return
-    if (entries[0].target.classList.contains('header')) return;
-
-    // If intersection is a section, add the active style to the corresponding link
-    // Get the target dataset id to style the link
-    const sectionId = entries[0].target.dataset.id;
-
-    // Set the active link
-    view.setActiveNavLink(view.navList.querySelector(`.nav__link[href='#${sectionId}']`));
+    // If current section is not an empty string ,set the active link
+    if (currentSection) view.setActiveNavLink(document.querySelector(`.nav__link[href='#${currentSection}']`));
 };
 
 // Populate nav
@@ -102,7 +101,6 @@ view.populateNavList();
 view.navPublisher(navLinkHandler);
 view.topButtonPublisher(topButtonHandler);
 view.headerButtonPublisher(headerButtonHandler);
+view.navButtonPublisher(navButtonHandler);
 view.formPublisher(formSubmissionHandler);
 view.scrollPublisher(scrollHandler);
-view.addSectionObserver(sectionObserverHandler);
-view.navButtonPublisher(navButtonHandler);
